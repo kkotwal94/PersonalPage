@@ -8,17 +8,10 @@ body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0px;
 	width: 100%;
-	/*background-color: rgb(48, 48, 48);*/
-}
-
-.navbar-buttons {
-	margin-top:-50px;
-	margin-left: 500px;
 }
 
 @font-face {
 	font-family: 'material-ui-icons';
-	//src: url('https://fonts.googleapis.com/icon?family=Material+Icons');
 }
 @font-face {
 	font-family: 'material-ui-icons';

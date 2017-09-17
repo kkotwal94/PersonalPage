@@ -29,7 +29,7 @@ if (TARGET === 'build') {
             loaders: [
                 {
                     test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style', 'css')
+                    loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
                 },
                 {
                     test: /\.jsx?$/,
@@ -65,7 +65,7 @@ if (TARGET === 'start') {
             loaders: [
                 {
                     test: /\.css$/,
-                    loaders: ['style', 'css']
+                    loaders: ['style-loader', 'css-loader']
                 },
                 {
                     test: /\.jsx?$/,

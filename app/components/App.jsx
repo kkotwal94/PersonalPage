@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Navigation from './Navbar'
 
 
 export default class App extends Component {
@@ -8,9 +12,11 @@ export default class App extends Component {
   }
   render() {
     return(
+      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
       <div>
-        Hello World
+        <Navigation />
       </div>
+    </MuiThemeProvider>
     );
   }
 }
