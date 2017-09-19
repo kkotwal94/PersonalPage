@@ -40,6 +40,16 @@ if (TARGET === 'build') {
                     test: /\.js$/,
                     loader: 'babel-loader',
                 },
+                {
+                  test: /\.jpg$/,
+                  loader: 'file-loader',
+                  include: path.resolve(ROOT_PATH, 'app/images'),
+                },
+                {
+                  test: /\.(webm|mp4)$/,
+                  loader: 'file-loader',
+                  include: path.resolve(ROOT_PATH, 'app/video'),
+                },
             ]
         },
         plugins: [
@@ -71,7 +81,15 @@ if (TARGET === 'start') {
                     test: /\.jsx?$/,
                     loaders: ['react-hot-loader', 'babel-loader'],
                     include: path.resolve(ROOT_PATH, 'app')
-                }
+                },
+                {
+                  test: /\.jpg$/,
+                  loader: 'file-loader',
+                },
+                {
+                  test: /\.(webm|mp4)$/,
+                  loader: 'file-loader',
+                },
             ]
         }
     });

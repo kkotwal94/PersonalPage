@@ -12,11 +12,14 @@
   "license": "MIT",
   "dependencies": {
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "file-loader": "^0.11.2",
     "material-ui": "^0.19.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router": "^4.2.0",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-tap-event-plugin": "^2.0.1",
+    "url-loader": "^0.5.9"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
