@@ -15,7 +15,9 @@ export default class Navigation extends Component{
             width: '100%',
             padding:0,
             margin: 0,
+            borderBottom: '1px solid rgba(255,255,255,.3)',
             opacity: 0.9,
+            background: 'rgba(48, 48, 48, .01)',
             position: 'fixed',
             display: 'inline-block'
         };
@@ -50,6 +52,7 @@ export default class Navigation extends Component{
                 <div style={navItems}>
                     <a href="#About" style={itemStyle}>About</a>
                     <a href="#Projects" style={itemStyle}>Projects</a>
+                    <a href="#Skills" style={itemStyle}>Skills</a>
                     <a href="#Contact" style={lastItemStyle}>Contact</a>
                 </div>
               </Paper>

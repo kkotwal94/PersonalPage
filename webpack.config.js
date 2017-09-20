@@ -50,6 +50,18 @@ if (TARGET === 'build') {
                   loader: 'file-loader',
                   include: path.resolve(ROOT_PATH, 'app/video'),
                 },
+                {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                 use: [{
+                   loader: 'file-loader',
+                   options: {
+                     name: '[name].[ext]',
+                     outputPath: 'fonts/',    // where the fonts will go
+                     publicPath: '../'       // override the default path
+                   }
+                 }]
+             },
+
             ]
         },
         plugins: [
@@ -90,6 +102,17 @@ if (TARGET === 'start') {
                   test: /\.(webm|mp4)$/,
                   loader: 'file-loader',
                 },
+                {
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                 use: [{
+                   loader: 'file-loader',
+                   options: {
+                     name: '[name].[ext]',
+                     outputPath: 'fonts/',    // where the fonts will go
+                     publicPath: '../'       // override the default path
+                   }
+                 }]
+             },
             ]
         }
     });
