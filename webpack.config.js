@@ -41,7 +41,7 @@ if (TARGET === 'build') {
                     loader: 'babel-loader',
                 },
                 {
-                  test: /\.jpg$/,
+                  test: /\.(jpg|png|gif)$/,
                   loader: 'file-loader',
                   include: path.resolve(ROOT_PATH, 'app/images'),
                 },
@@ -95,7 +95,7 @@ if (TARGET === 'start') {
                     include: path.resolve(ROOT_PATH, 'app')
                 },
                 {
-                  test: /\.jpg$/,
+                  test: /\.(jpg|png|gif)$/,
                   loader: 'file-loader',
                 },
                 {

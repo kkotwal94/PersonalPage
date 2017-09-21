@@ -26,7 +26,7 @@ export default class Hero extends Component {
       width: '100%',
       height: '100%',
       opacity: '1',
-      zIndex: '300000',
+      zIndex: '5000',
       textAlign: 'center',
     };
     let homepageStyle = {

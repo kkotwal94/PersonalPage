@@ -11,6 +11,8 @@ import videom from '../video/Inbox-Zero.webm';
 import videoimg from '../images/Inbox-Zero.jpg';
 import About from './About';
 import Skills from './Skills';
+import Projects from './Projects';
+import Github from './Github';
 
 
 
@@ -26,6 +28,8 @@ export default class App extends Component {
         <Hero />
         <About />
         <Skills />
+        <Projects />
+        <Github />
         <Footer />
       </div>
     </MuiThemeProvider>
