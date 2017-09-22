@@ -1,4 +1,4 @@
-import React, {Component} from 'React';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import FullWidthSection from './FullWidthSection';
 

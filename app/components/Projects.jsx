@@ -1,4 +1,4 @@
-import React, {Component} from 'React';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import FullWidthSection from './FullWidthSection';
 import {Grid, Row, Col} from 'react-bootstrap';
@@ -112,7 +112,7 @@ export default class Projects extends Component {
         break;
       case "lazy":
         source = this.lazysource;
-        demo = this.lazysite;
+        demo = null;
         title = "TooLazyTo";
         description = "Too Lazy To... is a app created to have people exchange favors with each other, whether its through money or other favors itself, like a oncampus craigslist, except you have rep. So dont lose your street cred by forgetting to hold up your end of the bargain. Really, you dont have to ask for anything either, a true hero would do some things for free! Through this app (Node, Mongo, React, Express) I learned that it was terribly hard to communicate between components without writing fragile code. Which was when I discovered react. I also learned that load time and anything more than a second feels like forever.";
         break;
@@ -130,13 +130,13 @@ export default class Projects extends Component {
         break;
       case "kareddit":
         source = this.karedditsource;
-        demo = this.karedditsite;
+        demo = null;
         title = "KaReddit";
         description = "This was done for an Advanced Web Technologies course. It is a reddit clone and has most of the same functionality. You can have a link post, or just a body post, or even both. It was my first attempt at making a solo stack-based website. The idea was inherited from the MEAN stack, except using Angular I used React.";
         break;
       case "parkinglot":
         source = this.parkingsource;
-        demo = this.parkingsite;
+        demo = null;
         title = "Parking Lot Application"
         description = "A parking lot system programmed in NodeJS, ReactJS, ExpressJS, and templating. I used mongodb for a database. This project just randomizes all the users that are signed up with a profile to a parking spot. The slick part is their is a admin profile to it. The admin can add violations based off user or vehicle information, the admin can also edit profiles and select slots for users to stop at. The admin can most importantly add violations and notes, whether they have the user or not. If the user is not determined when adding a violation, the admin may assign a vehicle a violation, and then a vehicle to a user when they figure it out who the violation belongs to. The user may do all the same but they cannot edit info like parking lot #, or tag #s. They can however have multiple vehicles and select the one that is currently in use. If you decide to pull it, create some users, and create a user with the id Admin, In the demo the admin login credentials admin, 123";
         break;
