@@ -7,11 +7,17 @@ import videoimg from '../images/Inbox-Zero.jpg';
 import karanimg from '../images/Karan.jpg';
 import Avatar from 'material-ui/Avatar';
 import RaisedButton from 'material-ui/RaisedButton';
+import $ from 'jquery';
 export default class Hero extends Component {
   constructor(props){
     super(props);
   }
 
+  navigate(type) {
+        $('.html, body').animate({
+          scrollTop: $("." + type).offset().top},
+          'slow');
+      }
   _renderHero() {
     let heroStyles = {
       backgroundColor: '#033649',
@@ -45,7 +51,7 @@ export default class Hero extends Component {
               <br/>
               <p className="header-text">Read below to learn about me and my passion</p>
               <br/>
-              <RaisedButton label="About Me" buttonStyle={aboutMeStyle} />
+            <RaisedButton label="About Me" buttonStyle={aboutMeStyle} onClick={() => this.navigate('about')}/>
             </div>
             <video preload="auto" style={videoStyle} autoPlay loop="loop" className="fillWidth" src={video}>
             <source />

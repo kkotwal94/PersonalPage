@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 import Scroll from 'react-scroll';
+import $ from 'jquery';
 
 
 
@@ -10,9 +11,30 @@ export default class Navigation extends Component{
     constructor(props){
       super(props);
     }
-    navigateAbout() {
-        console.log(ReactDOM.findDOMNode(this.about));
-    }
+    navigate(type) {
+        $('.html, body').animate({
+          scrollTop: $("." + type).offset().top},
+          'slow');
+      }
+
+   handleScroll(){
+         let navbar = $("#nav");
+         let windowsScrollTop  = window.pageYOffset;
+         if(windowsScrollTop > 0){
+           navbar[0].classList.add("navbar-fixed-top");
+         }else{
+           navbar[0].classList.remove("navbar-fixed-top");
+         }
+      }
+
+   componentDidMount() {
+   window.addEventListener('scroll', this.handleScroll);
+   }
+
+   componentWillUnmount() {
+   window.removeEventListener('scroll', this.handleScroll);
+   }
+
     render() {
         const navBarStyle = {
             height: '50px',
@@ -54,13 +76,14 @@ export default class Navigation extends Component{
         }
         return(
             <div>
-              <Paper  style={navBarStyle} zDepth={1}>
+              <Paper  style={navBarStyle} zDepth={1} ref={(input) => { this.navbar = input;}} id="nav">
                 <p style={nameStyle}>Karan Kotwal</p>
                 <div style={navItems}>
-                    <a href="#about" onClick={this.navigateAbout} style={itemStyle}>About</a>
-                <a href="#projects" style={itemStyle}>Projects</a>
-            <a href="#skills" style={itemStyle}>Skills</a>
-        <a href="#contact" style={lastItemStyle}>Contact</a>
+                    <a href="#about" onClick={() => this.navigate('about')} style={itemStyle}>About</a>
+
+            <a href="#skills" onClick={() => this.navigate('skills')} style={itemStyle}>Skills</a>
+<a href="#projects" onClick={() => this.navigate('projects')} style={itemStyle}>Projects</a>
+    <a href="#contact" onClick={() => this.navigate('contacts')} style={lastItemStyle}>Contact</a>
                 </div>
               </Paper>
 

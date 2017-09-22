@@ -26,16 +26,16 @@ export default class Projects extends Component {
   }
 
   parsonsource = () => {
-    window.location.href = "";
+    window.location.href = "https://github.com/kkotwal94/ParsonsProject";
   }
   parsonsite = () => {
-    window.location.href = "";
+    window.location.href = "http://parsons.kkotwal.me";
   }
   passionsource = () => {
-    window.location.href = "";
+    window.location.href = "https://github.com/kkotwal94/20000Passions";
   }
   passionsite = () => {
-    window.location.href = "";
+    window.location.href = "http://20000Passions.kkotwal.me";
   }
   sourceRedirect =() =>{
   	window.location.href = "https://github.com/kkotwal94/IsoReportProcessor";
@@ -261,7 +261,7 @@ export default class Projects extends Component {
   }
   render(){
     return (
-      <div>
+      <div className="projects">
         {this._renderModal()}
         {this._renderProjects()}
 

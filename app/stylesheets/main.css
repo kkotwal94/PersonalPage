@@ -24,6 +24,11 @@ body {
 	color:black;
 }
 
+.navbar-fixed-top {
+	background-color: rgb(3, 54, 73) !important;
+	opacity: 1 !important;
+}
+
 ul {
 	list-style: none;
 padding: 0;

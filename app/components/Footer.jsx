@@ -52,7 +52,7 @@ export default class Footer extends Component {
 
   render() {
     return(
-      <div>
+      <div className="contacts">
       {this._renderFooter()}
     </div>
     );

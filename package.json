@@ -5,16 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --devtool eval --progress --colors --hot",
     "start": "webpack-dev-server --devtool eval --progress --colors --hot --inline --history-api-fallback --content-base build"
   },
   "author": "Karan Kotwal",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "file-loader": "^0.11.2",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
     "material-ui": "^0.19.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.3",

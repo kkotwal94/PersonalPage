@@ -40,7 +40,7 @@ export default class About extends Component {
   }
   render() {
     return (
-      <div className="#about" ref={(input) => { this.about = input; }}>
+      <div className="about" ref={(input) => { this.about = input; }}>
         {this._renderAbout()}
       </div>
     );
